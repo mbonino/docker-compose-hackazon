@@ -19,7 +19,7 @@ RUN apk add --update \
     rm /master.zip && \
     mv hackazon-master/ hackazon/ && \
     cd hackazon && \
-    php5 composer.phar self-update && \
+    php5 composer.phar self-update --2.2 && \
     php5 composer.phar install -o --prefer-dist && \
     mkdir /run/apache2 && \
     sed -i '/LoadModule rewrite_module/s/^#//g' /etc/apache2/httpd.conf && \
